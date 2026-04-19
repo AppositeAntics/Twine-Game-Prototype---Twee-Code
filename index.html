@@ -10,9 +10,7 @@
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play index.</tw-noscript></noscript></tw-story>
 <tw-storydata name="index" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="E6551C9D-0678-40A9-9B14-32ED346AECB7" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"> </script><tw-passagedata pid="1" name="Intro" tags="" position="800,0" size="100,100">(set: $endGame to 0)
-
 (set: $roomsToWin to 1)
-
 You are walking through the suburbs, towards the house where your friend Savannah lives. It&#39;s not a long way to go, and you&#39;ve been here before. Many times, in fact, though in happier circumstances (click-append: &quot;happier circumstances&quot;) [ for you].
 
 There&#39;s going to be a party, and you suppose you will have to be involved. If Anna had been here, it would have been a good time, but her absence will no doubt poison the mood. Hopefully they all have the good grace not to bring it up.
@@ -25,7 +23,6 @@ There&#39;s going to be a party, and you suppose you will have to be involved. I
 
 
 </tw-passagedata><tw-passagedata pid="2" name="Savannah&#39;s House" tags="" position="1000,200" size="100,100">You are standing in the street outside Savannah’s House. You feel bad, and you don&#39;t know why.
-
 (if: $endGame is $roomsToWin) [There is no time like the [[present]].]
 (if: $endGame is not $roomsToWin) [The lights are on inside, people are talking. They seem to be having a good time without you. Part of you wants to go inside, but most of you does not. You can still put it off for a bit longer, but best not linger here, in case they see you. There&#39;s plenty of ways to kill time here, if you don&#39;t mind exploring a little.
 
@@ -40,8 +37,7 @@ From here, you can head back to [[Savannah&#39;s House]] or investigate the [[Ne
 (if: $endGame is $roomsToWin) [It&#39;s night. You should head to [[Savannah&#39;s House]].]
 
 
-</tw-passagedata><tw-passagedata pid="5" name="New Developments" tags="" position="1100,500" size="100,100">
-(if: $endGame is not $roomsToWin) [You are nearing an area closer to Bell Street and the Coburg Train Station. Looking around at the scaffolding and black tarp, you can see that developers have taken a keen interest. 
+</tw-passagedata><tw-passagedata pid="5" name="New Developments" tags="" position="1100,500" size="100,100">(if: $endGame is not $roomsToWin) [You are nearing an area closer to Bell Street and the Coburg Train Station. Looking around at the scaffolding and black tarp, you can see that developers have taken a keen interest. 
 
 From here, you can go back to the street with the [[Old Shops]], or make your way towards [[Bunnings]].]
 
@@ -65,12 +61,11 @@ Head back towards civilization, head towards the [[Bunnings]]. Or compound your 
 (if: $endGame is $roomsToWin) [ This car park is grey and empty. Hurry through it, back towards the [[Bunnings]].]
 </tw-passagedata><tw-passagedata pid="9" name="Town Hall" tags="" position="1100,1100" size="100,100">You&#39;re outside Coburg town hall, a plaster and brick edifice. (unless: (visited: &quot;The Protestors&quot;)) [A few lights are on inside (click-append: &quot;inside&quot;) [ for security reasons,] but there are no council meetings tonight. Everyone has gone home.] (else:) [There are no lights on inside.]
 
-(unless: (visited: &quot;The Protestors&quot;))[(click-append: &quot;Everyone has gone home.&quot;) [ &lt;br&gt;You’ve walked past this place many times, and never entered. Tonight will be no exception. Once you saw a [[group of people holding signs |The Protestors]] out to the people driving by on Bell Street. They must have been pretty fired up about something.]]
-
-
+(unless: (visited: &quot;The Protestors&quot;))[(click-append: &quot;Everyone has gone home.&quot;) [ &lt;br&gt;
+You’ve walked past this place many times, and never entered. Tonight will be no exception. Once you saw a [[group of people holding signs |The Protestors]] out to the people driving by on Bell Street. They must have been pretty fired up about something.]]
 It might be best to go back to the [[Car Park]].
 </tw-passagedata><tw-passagedata pid="10" name="The Protestors" tags="" position="1100,1300" size="100,100">Other people are so much better at caring about things. It’s one of those niggling personality traits that has always made you suspect that, in some way, you are terribly dissimilar to all the people around you. “Get involved”, they make it sound so simple. It’s one of those little phrases, like “find your tribe”, “make friends”, “eat healthy” or “get married”, that comes naturally to other people. It’s like a comic strip: in one panel they are alone, and in the next they are not. But hey, maybe it makes sense for an artist to live in the [[gutter]].
-</tw-passagedata><tw-passagedata pid="11" name="gutter" tags="" position="1300,1400" size="100,100">But do you know who else lived in the gutter? That is right. Uesareus the Clever. A kobold mercenary, Uesareus spent the first eighteen years of his life living on the streets of Shreveport, until he stole the spellbook of Uredegar the Barely Just, (click-append: &quot;Uredegar the Barely Just&quot;) [ the character played by Anna,] a practicing magician named after his arcane exam scores. Bitterleaf&#39;s prowess as an arcane trickster (click-append: &quot;arcane trickster&quot;) [ (Uesareus Bitterleaf absolutely certainly never ever began his life as a character sheet that someone spilled lemonade on), er, Kleptothaum was (click-replace: &quot;was&quot;) [is] legendary. 
+</tw-passagedata><tw-passagedata pid="11" name="gutter" tags="" position="1300,1400" size="100,100">But do you know who else lived in the gutter? That is right. Uesareus Bitterleaf. A kobold mercenary, Uesareus spent the first eighteen years of his life living on the streets of Shreveport, until he stole the spellbook of Uredegar the Barely Just, (click-append: &quot;Uredegar the Barely Just&quot;) [, the character played by Anna] a practicing magician named after his arcane exam scores. Bitterleaf&#39;s prowess as an arcane trickster (click-append: &quot;arcane trickster&quot;) [ (Uesareus Bitterleaf absolutely certainly never ever began his life as a character sheet that someone spilled lemonade on)], er, Kleptothaum was (click-replace: &quot;was&quot;) [is] legendary. 
 
 One day you hope to find an inciting incident (click-replace: &quot;inciting incident&quot;) [adolescent adventure] (click-replace: &quot;adolescent adventure&quot;) [young adult novel] (click-replace: &quot;young adult novel&quot;) [humorously cynical blog post about you] (click-replace: &quot;humorously cynical blog post about you&quot;) [meet cute] (click-replace: &quot;meet cute&quot;) [whatever] of your very own. Then, you will be able to take control of your life. By deploying terrifying quantities of violence against deserving targets. And plundering their doubloons.
 
