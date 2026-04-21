@@ -30,14 +30,22 @@ You can pick a street at random, getting lost in the [[Suburban Sprawl]] or go w
 
 
 
-</tw-passagedata><tw-passagedata pid="3" name="Suburban Sprawl" tags="" position="800,400" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="Old Shops" tags="" position="1200,300" size="100,100">(if: $endGame is not $roomsToWin) [These old buildings have seen many businesses come and go. You count how many here are the same now as when you last visited. One, two, three, four, five…that must be a record. 
+</tw-passagedata><tw-passagedata pid="3" name="Suburban Sprawl" tags="" position="800,400" size="100,100">(if: $endGame is not $roomsToWin)
+Cottage houses lie in every direction. It would take an expert to find their bearings in an environment as hostile and repetitive as this. Thankfully, you are such a one. 
+
+You can go back to [[Savannah&#39;s House]] or press on to see if the [[Milk Bar]] still has that chicken mural.
+
+(if: $endGame is $roomsToWin)
+It is late. In every direction, you can only see rows and rows of cottage houses. It would be best to go to [[Savannah&#39;s House]].
+
+</tw-passagedata><tw-passagedata pid="4" name="Old Shops" tags="" position="1400,300" size="100,100">(if: $endGame is not $roomsToWin) [These old buildings have seen many businesses come and go. You count how many here are the same now as when you last visited. One, two, three, four, five…that must be a record. 
 
 From here, you can head back to [[Savannah&#39;s House]] or investigate the [[New Developments]].]
 
 (if: $endGame is $roomsToWin) [It&#39;s night. You should head to [[Savannah&#39;s House]].]
 
 
-</tw-passagedata><tw-passagedata pid="5" name="New Developments" tags="" position="1100,500" size="100,100">(if: $endGame is not $roomsToWin) [You are nearing an area closer to Bell Street and the Coburg Train Station. Looking around at the scaffolding and black tarp, you can see that developers have taken a keen interest. 
+</tw-passagedata><tw-passagedata pid="5" name="New Developments" tags="" position="1500,500" size="100,100">(if: $endGame is not $roomsToWin) [You are nearing an area closer to Bell Street and the Coburg Train Station. Looking around at the scaffolding and black tarp, you can see that developers have taken a keen interest. 
 
 From here, you can go back to the street with the [[Old Shops]], or make your way towards [[Bunnings]].]
 
@@ -47,32 +55,36 @@ From here, you can go back to the street with the [[Old Shops]], or make your wa
 
 
 
-</tw-passagedata><tw-passagedata pid="6" name="present" tags="" position="700,200" size="100,100">You won the game!!!!!!</tw-passagedata><tw-passagedata pid="7" name="Bunnings" tags="" position="1100,700" size="100,100">(if: $endGame is not $roomsToWin) [ Near Bell Street, you pass by Coburg Bunnings. The only thing that separates it from the main drag is a large car park. It seems like it shut about an hour ago. The setting sun gives the plain grey building a ruddy halo. 
+</tw-passagedata><tw-passagedata pid="6" name="present" tags="" position="700,200" size="100,100">You won the game!!!!!!</tw-passagedata><tw-passagedata pid="7" name="Bunnings" tags="" position="1600,700" size="100,100">(if: $endGame is not $roomsToWin) [ Near Bell Street, you pass by Coburg Bunnings. The only thing that separates it from the main drag is a large car park. It seems like it shut about an hour ago. The setting sun gives the plain grey building a ruddy halo. 
 
-You can go and see the [[New Developments]] or head out into the [[Car Park]]. ]
+You can go and see the [[New Developments]] or head out into the [[Car Park]]. On one side of the store there is a [[Side Road]] which leads to a loading dock.  
 
 (else:)  [You are at Coburg Bunnings, near Bell Street. It is cold, and you are beginning to regret having trekked out so far. To get to Savannah’s House, first you need to travel through the [[New Developments]].]
 
 
-</tw-passagedata><tw-passagedata pid="8" name="Car Park" tags="" position="1100,900" size="100,100">(if: $endGame is not $roomsToWin) [A car park without cars. Then what makes it a car park? A question for the philosophers.
+</tw-passagedata><tw-passagedata pid="8" name="Car Park" tags="" position="1700,900" size="100,100">(if: $endGame is not $roomsToWin) [A car park without cars. Then what makes it a car park? A question for the philosophers.
 
-Head back towards civilization, head towards the [[Bunnings]]. Or compound your folly, sink deeper into savagery, and visit the [[Town Hall]]. ]
+Head back towards civilization, head towards the [[Bunnings]]. Or compound your folly, sink deeper into savagery, and visit the [[Town Hall]]. You are also nearby to a crosswalk over the [[Main Road]].
 
 (if: $endGame is $roomsToWin) [ This car park is grey and empty. Hurry through it, back towards the [[Bunnings]].]
-</tw-passagedata><tw-passagedata pid="9" name="Town Hall" tags="" position="1100,1100" size="100,100">You&#39;re outside Coburg town hall, a plaster and brick edifice. (unless: (visited: &quot;The Protestors&quot;)) [A few lights are on inside (click-append: &quot;inside&quot;) [ for security reasons,] but there are no council meetings tonight. Everyone has gone home.] (else:) [There are no lights on inside.]
+</tw-passagedata><tw-passagedata pid="9" name="Town Hall" tags="" position="1800,1100" size="100,100">You&#39;re outside Coburg town hall, a plaster and brick edifice. (unless: (visited: &quot;The Protestors&quot;)) [A few lights are on inside (click-append: &quot;inside&quot;) [ for security reasons,] but there are no council meetings tonight. Everyone has gone home.] (else:) [There are no lights on inside.]
 
 (unless: (visited: &quot;The Protestors&quot;))[(click-append: &quot;Everyone has gone home.&quot;) [ &lt;br&gt;
 You’ve walked past this place many times, and never entered. Tonight will be no exception. Once you saw a [[group of people holding signs |The Protestors]] out to the people driving by on Bell Street. They must have been pretty fired up about something.]]
 It might be best to go back to the [[Car Park]].
-</tw-passagedata><tw-passagedata pid="10" name="The Protestors" tags="" position="1100,1300" size="100,100">Other people are so much better at caring about things. It’s one of those niggling personality traits that has always made you suspect that, in some way, you are terribly dissimilar to all the people around you. “Get involved”, they make it sound so simple. It’s one of those little phrases, like “find your tribe”, “make friends”, “eat healthy” or “get married”, that comes naturally to other people. It’s like a comic strip: in one panel they are alone, and in the next they are not. But hey, maybe it makes sense for an artist to live in the [[gutter]].
-</tw-passagedata><tw-passagedata pid="11" name="gutter" tags="" position="1300,1400" size="100,100">But do you know who else lived in the gutter? That is right. Uesareus Bitterleaf. A kobold mercenary, Uesareus spent the first eighteen years of his life living on the streets of Shreveport, until he stole the spellbook of Uredegar the Barely Just, (click-append: &quot;Uredegar the Barely Just&quot;) [, the character played by Anna] a practicing magician named after his arcane exam scores. Bitterleaf&#39;s prowess as an arcane trickster (click-append: &quot;arcane trickster&quot;) [ (Uesareus Bitterleaf absolutely certainly never ever began his life as a character sheet that someone spilled lemonade on)], er, Kleptothaum was (click-replace: &quot;was&quot;) [is] legendary. 
+</tw-passagedata><tw-passagedata pid="10" name="The Protestors" tags="" position="1900,1300" size="100,100">Other people are so much better at caring about things. It’s one of those niggling personality traits that has always made you suspect that, in some way, you are terribly dissimilar to all the people around you. “Get involved”, they make it sound so simple. It’s one of those little phrases, like “find your tribe”, “make friends”, “eat healthy” or “get married”, that comes naturally to other people. It’s like a comic strip: in one panel they are alone, and in the next they are not. But hey, maybe it makes sense for an artist to live in the [[gutter]].
+</tw-passagedata><tw-passagedata pid="11" name="gutter" tags="" position="2000,1500" size="100,100">But do you know who else lived in the gutter? That is right. Uesareus Bitterleaf. A kobold mercenary, Uesareus spent the first eighteen years of his life living on the streets of Shreveport, until he stole the spellbook of Uredegar the Barely Just, (click-append: &quot;Uredegar the Barely Just&quot;) [, the character played by Anna] a practicing magician named after his arcane exam scores. Bitterleaf&#39;s prowess as an arcane trickster (click-append: &quot;arcane trickster&quot;) [ (Uesareus Bitterleaf absolutely certainly never ever began his life as a character sheet that someone spilled lemonade on)], er, Kleptothaum was (click-replace: &quot;was&quot;) [is] legendary. 
 
 One day you hope to find an inciting incident (click-replace: &quot;inciting incident&quot;) [adolescent adventure] (click-replace: &quot;adolescent adventure&quot;) [young adult novel] (click-replace: &quot;young adult novel&quot;) [humorously cynical blog post about you] (click-replace: &quot;humorously cynical blog post about you&quot;) [meet cute] (click-replace: &quot;meet cute&quot;) [whatever] of your very own. Then, you will be able to take control of your life. By deploying terrifying quantities of violence against deserving targets. And plundering their doubloons.
 
 [[==&gt;|In Common]]
 
-</tw-passagedata><tw-passagedata pid="12" name="In Common" tags="" position="1100,1600" size="100,100">There is one thing that Uesareus and those protesters have in common, something that you lack: the things they care about matter. If the Dark Lord had not been slain, the Realms would have been Lost. If the Bill is Passed by the Council, then our Lives will be…you don’t remember the specifics. For better or worse, they cared about things that actually affected people’s real lives. All you do all day is stare at screens, and then make compromises between one screen and the other. Five more minutes on the phone, and then I’ll draw for half an hour. [[What’s the difference?]] 
-</tw-passagedata><tw-passagedata pid="13" name="What’s the difference?" tags="" position="900,1400" size="100,100">You are fairly certain that nothing you do changes anything for anyone other than yourself.
+</tw-passagedata><tw-passagedata pid="12" name="In Common" tags="" position="1900,1700" size="100,100">There is one thing that Uesareus and those protesters have in common, something that you lack: the things they care about matter. If the Dark Lord had not been slain, the Realms would have been Lost. If the Bill is Passed by the Council, then our Lives will be…you don’t remember the specifics. For better or worse, they cared about things that actually affected people’s real lives. All you do all day is stare at screens, and then make compromises between one screen and the other. Five more minutes on the phone, and then I’ll draw for half an hour. [[What’s the difference?]] 
+
+
+[[Blank Room]]
+
+</tw-passagedata><tw-passagedata pid="13" name="What’s the difference?" tags="" position="1800,1400" size="100,100">You are fairly certain that nothing you do changes anything for anyone other than yourself.
 
 And why shouldn’t you believe that? 
 
@@ -88,7 +100,43 @@ Stopped what happened.
 
 The little gate swings open, and you step into the garden. Among the weeds, there’s a plastic trowel that you played with when you were like, twelve. You are about to knock on the door, when suddenly you feel a terrible a churning in your guts...
 
-Oh god! You&#39;re going to shit yourself! (click-replace: &quot;shit yourself!&quot;) [cry!] (click-append: &quot;cry!&quot;) [ Well, now that you think of it, maybe you don&#39;t feel that bad. But maybe its best to let that unnacountable burning sensation behind your eyes settle for a moment, and step out onto the [[Street|Savannah&#39;s House]].]</tw-passagedata></tw-storydata>
+Oh god! You&#39;re going to shit yourself! (click-replace: &quot;shit yourself!&quot;) [cry!] (click-append: &quot;cry!&quot;) [ Well, now that you think of it, maybe you don&#39;t feel that bad. But maybe its best to let that unnacountable burning sensation behind your eyes settle for a moment, and step out onto the [[street|Savannah&#39;s House]].]</tw-passagedata><tw-passagedata pid="15" name="Blank Room" tags="" position="1800,1900" size="100,100">(if: $endGame is not $roomsToWin)
+
+(if: $endGame is $roomsToWin)</tw-passagedata><tw-passagedata pid="16" name="Milk Bar" tags="" position="800,600" size="100,100">(if: $endGame is not $roomsToWin)
+An old milk bar stands at the corner of two suburban streets. Twenty or thirty years ago, before you were born, it was converted into a house. One of the walls facing the street has been painted with a mural of three dancing chickens. 
+
+You can see the [[street that leads to Savannah’s House |Suburban Sprawl]] from here. The [[High School]] is two blocks down and one to the right. Across the street is a dingy [[Alley]].  
+
+(if: $endGame is $roomsToWin)
+You’re standing outside an old, disused milk bar, at night. You had better get to Savannah’s House, but first you need to navigate the [[Suburban Sprawl]]. 
+
+</tw-passagedata><tw-passagedata pid="17" name="High School" tags="" position="800,800" size="100,100">(if: $endGame is not $roomsToWin)
+Your feet crunch on the bitumen laneway. The pavements on either side are so cracked and uneven that they are completely unusable. You never went to this school, if that’s what you are wondering (why would you be wondering that, you wonder). This street is built on top of a hill, at the base of which is a park.
+
+At this time of night, all the children have left.  Thank god.
+
+Leaning from the steep slope and looking into the gathering darkness, you see the park and the old [[Walking Track]]. You turn and see the way to the old [[Milk Bar]].
+
+(if: $endGame is $roomsToWin)
+The street in front of the high school is deserted. You had best get moving, back to the [[Milk Bar]] and then to Savannah’s House. 
+</tw-passagedata><tw-passagedata pid="18" name="Walking Track" tags="" position="800,1000" size="100,100">(if: $endGame is not $roomsToWin)
+At the base of the hill, there is a park with a few old buildings and a circular walking track. It is getting dark, and in a few hours this field will be an indistinguishable pitch black. 
+
+You can climb up the cliffy footpath to the street outside the old [[High School]]. Or, you could keep going down to [[Bowden Street Reserve]].
+
+(if: $endGame is $roomsToWin)
+You are at the park on the base of the hill. It is night-time, and it feels as if you are walking through a black void. You quickly climb up the [[Hill.|High School]]</tw-passagedata><tw-passagedata pid="19" name="Alley" tags="" position="600,600" size="100,100">This dirt alley runs between two rows of houses. There is a sad looking shape slumped against a fence. 
+
+You can go back to the [[Milk Bar]].  
+</tw-passagedata><tw-passagedata pid="20" name="Bowden Street Reserve" tags="" position="800,1200" size="100,100">You’re down by the creek. There is the sound of rushing water and distant traffic. Its been a while since you’ve come down here. 
+
+Through the trees, you can see the [[Walking Track]]. </tw-passagedata><tw-passagedata pid="21" name="Side Road" tags="" position="1800,700" size="100,100">This driveway leads into a loading dock. Someone has taken too hard of a right turn, and had an accident. All that is left is this tire.
+
+From here, it would be best to go back to the [[Bunnings]].
+</tw-passagedata><tw-passagedata pid="22" name="Main Road" tags="" position="1900,900" size="100,100">Even at this late hour, Bell Street is thrumming with traffic. Faces and hands can be barely discerned through the shining glass.
+
+You should head back to the [[Car Park]].
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
