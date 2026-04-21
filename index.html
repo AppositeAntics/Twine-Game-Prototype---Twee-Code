@@ -11,7 +11,7 @@
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play index.</tw-noscript></noscript></tw-story>
 <tw-storydata name="index" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="E6551C9D-0678-40A9-9B14-32ED346AECB7" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"> </script><tw-passagedata pid="1" name="Intro" tags="" position="800,0" size="100,100">(set: $endGame to 0)
 (set: $roomsToWin to 1)
-You are walking through the suburbs, towards the house where your friend Savannah lives. It&#39;s not a long way to go, and you&#39;ve been here before. Many times, in fact, though in happier circumstances (click-append: &quot;happier circumstances&quot;) [ for you].
+You are walking through the suburbs, towards the house where your friend Savannah lives. It&#39;s not a long way to go, and you&#39;ve been here before. Many times, in fact, though in happier circumstances(click-append: &quot;happier circumstances&quot;) [ for you].
 
 There&#39;s going to be a party, and you suppose you will have to be involved. If Anna had been here, it would have been a good time, but her absence will no doubt poison the mood. Hopefully they all have the good grace not to bring it up.
 
@@ -24,19 +24,17 @@ There&#39;s going to be a party, and you suppose you will have to be involved. I
 
 </tw-passagedata><tw-passagedata pid="2" name="Savannah&#39;s House" tags="" position="1000,200" size="100,100">You are standing in the street outside Savannah’s House. You feel bad, and you don&#39;t know why.
 (if: $endGame is $roomsToWin) [There is no time like the [[present]].]
-(if: $endGame is not $roomsToWin) [The lights are on inside, people are talking. They seem to be having a good time without you. Part of you wants to go inside, but most of you does not. You can still put it off for a bit longer, but best not linger here, in case they see you. There&#39;s plenty of ways to kill time here, if you don&#39;t mind exploring a little.
+(if: $endGame is not $roomsToWin) [The lights are on inside, people are talking. They seem to be having a good time without you. Part of you wants to go inside, but most of you does not. You can still put it off for a bit longer, but best not linger, in case they see you. There&#39;s plenty of ways to kill time here, if you don&#39;t mind exploring a little.
 
 You can pick a street at random, getting lost in the [[Suburban Sprawl]] or go wandering down in the direction of the [[Old Shops]].]
 
 
 
-</tw-passagedata><tw-passagedata pid="3" name="Suburban Sprawl" tags="" position="800,400" size="100,100">(if: $endGame is not $roomsToWin)
-Cottage houses lie in every direction. It would take an expert to find their bearings in an environment as hostile and repetitive as this. Thankfully, you are such a one. 
+</tw-passagedata><tw-passagedata pid="3" name="Suburban Sprawl" tags="" position="800,400" size="100,100">(if: $endGame is not $roomsToWin) [ Cottage houses lie in every direction. It would take an expert to find their bearings in an environment as hostile and repetitive as this. Thankfully, you are such a one. 
 
-You can go back to [[Savannah&#39;s House]] or press on to see if the [[Milk Bar]] still has that chicken mural.
+You can go back to [[Savannah&#39;s House]] or press on to see if the [[Milk Bar]] still has that chicken mural. ]
 
-(if: $endGame is $roomsToWin)
-It is late. In every direction, you can only see rows and rows of cottage houses. It would be best to go to [[Savannah&#39;s House]].
+(if: $endGame is $roomsToWin) [It is late. In every direction, you can only see rows and rows of cottage houses. It would be best to go to [[Savannah&#39;s House]].]
 
 </tw-passagedata><tw-passagedata pid="4" name="Old Shops" tags="" position="1400,300" size="100,100">(if: $endGame is not $roomsToWin) [These old buildings have seen many businesses come and go. You count how many here are the same now as when you last visited. One, two, three, four, five…that must be a record. 
 
@@ -55,16 +53,16 @@ From here, you can go back to the street with the [[Old Shops]], or make your wa
 
 
 
-</tw-passagedata><tw-passagedata pid="6" name="present" tags="" position="700,200" size="100,100">You won the game!!!!!!</tw-passagedata><tw-passagedata pid="7" name="Bunnings" tags="" position="1600,700" size="100,100">(if: $endGame is not $roomsToWin) [ Near Bell Street, you pass by Coburg Bunnings. The only thing that separates it from the main drag is a large car park. It seems like it shut about an hour ago. The setting sun gives the plain grey building a ruddy halo. 
+</tw-passagedata><tw-passagedata pid="6" name="present" tags="" position="700,200" size="100,100">You won the game!!!!!!</tw-passagedata><tw-passagedata pid="7" name="Bunnings" tags="" position="1600,700" size="100,100">(if: $endGame is not $roomsToWin) [Near Bell Street, you pass by Coburg Bunnings. The only thing that separates it from the main drag is a large car park. It seems like it shut about an hour ago. The setting sun gives the plain grey building a ruddy halo. 
 
-You can go and see the [[New Developments]] or head out into the [[Car Park]]. On one side of the store there is a [[Side Road]] which leads to a loading dock.  
+You can go and see the [[New Developments]] or head out into the [[Car Park]]. On one side of the store there is a [[Side Road]] which leads to a loading dock. ]
 
 (else:)  [You are at Coburg Bunnings, near Bell Street. It is cold, and you are beginning to regret having trekked out so far. To get to Savannah’s House, first you need to travel through the [[New Developments]].]
 
 
 </tw-passagedata><tw-passagedata pid="8" name="Car Park" tags="" position="1700,900" size="100,100">(if: $endGame is not $roomsToWin) [A car park without cars. Then what makes it a car park? A question for the philosophers.
 
-Head back towards civilization, head towards the [[Bunnings]]. Or compound your folly, sink deeper into savagery, and visit the [[Town Hall]]. You are also nearby to a crosswalk over the [[Main Road]].
+Head back towards civilization, head towards the [[Bunnings]]. Or compound your folly, sink deeper into savagery, and visit the [[Town Hall]]. You are also nearby to a crosswalk over the [[Main Road]].]
 
 (if: $endGame is $roomsToWin) [ This car park is grey and empty. Hurry through it, back towards the [[Bunnings]].]
 </tw-passagedata><tw-passagedata pid="9" name="Town Hall" tags="" position="1800,1100" size="100,100">You&#39;re outside Coburg town hall, a plaster and brick edifice. (unless: (visited: &quot;The Protestors&quot;)) [A few lights are on inside (click-append: &quot;inside&quot;) [ for security reasons,] but there are no council meetings tonight. Everyone has gone home.] (else:) [There are no lights on inside.]
@@ -98,34 +96,28 @@ Stopped what happened.
 
 (set: $endGame to 1)</tw-passagedata><tw-passagedata pid="14" name="On the doorstep" tags="" position="1000,0" size="100,100">They were her friends, not yours, and you can&#39;t help feel their invitation tonight is born out of pity. 
 
-The little gate swings open, and you step into the garden. Among the weeds, there’s a plastic trowel that you played with when you were like, twelve. You are about to knock on the door, when suddenly you feel a terrible a churning in your guts...
+The little gate swings open, and you step into the garden. Among the weeds, there’s a plastic trowel that you played with when you were like, twelve. You are about to knock on the door, when suddenly you feel a terrible churning in your guts...
 
 Oh god! You&#39;re going to shit yourself! (click-replace: &quot;shit yourself!&quot;) [cry!] (click-append: &quot;cry!&quot;) [ Well, now that you think of it, maybe you don&#39;t feel that bad. But maybe its best to let that unnacountable burning sensation behind your eyes settle for a moment, and step out onto the [[street|Savannah&#39;s House]].]</tw-passagedata><tw-passagedata pid="15" name="Blank Room" tags="" position="1800,1900" size="100,100">(if: $endGame is not $roomsToWin)
 
-(if: $endGame is $roomsToWin)</tw-passagedata><tw-passagedata pid="16" name="Milk Bar" tags="" position="800,600" size="100,100">(if: $endGame is not $roomsToWin)
-An old milk bar stands at the corner of two suburban streets. Twenty or thirty years ago, before you were born, it was converted into a house. One of the walls facing the street has been painted with a mural of three dancing chickens. 
+(if: $endGame is $roomsToWin)</tw-passagedata><tw-passagedata pid="16" name="Milk Bar" tags="" position="800,600" size="100,100">(if: $endGame is not $roomsToWin)[An old milk bar stands at the corner of two suburban streets. Twenty or thirty years ago, before you were born, it was converted into a house. One of the walls facing the street has been painted with a mural of three dancing chickens. 
 
-You can see the [[street that leads to Savannah’s House |Suburban Sprawl]] from here. The [[High School]] is two blocks down and one to the right. Across the street is a dingy [[Alley]].  
+You can see the [[street that leads to Savannah’s House |Suburban Sprawl]] from here. The [[High School]] is two blocks down and one to the right. Across the street is a dingy [[Alley]]. ]
 
-(if: $endGame is $roomsToWin)
-You’re standing outside an old, disused milk bar, at night. You had better get to Savannah’s House, but first you need to navigate the [[Suburban Sprawl]]. 
+(if: $endGame is $roomsToWin)[You’re standing outside an old, disused milk bar, at night. You had better get to Savannah’s House, but first you need to navigate the [[Suburban Sprawl]]. ]
 
-</tw-passagedata><tw-passagedata pid="17" name="High School" tags="" position="800,800" size="100,100">(if: $endGame is not $roomsToWin)
-Your feet crunch on the bitumen laneway. The pavements on either side are so cracked and uneven that they are completely unusable. You never went to this school, if that’s what you are wondering (why would you be wondering that, you wonder). This street is built on top of a hill, at the base of which is a park.
+</tw-passagedata><tw-passagedata pid="17" name="High School" tags="" position="800,800" size="100,100">(if: $endGame is not $roomsToWin)[Your feet crunch on the bitumen laneway. The pavements on either side are so cracked and uneven that they are completely unusable. You never went to this school, if that’s what you are wondering (why would you be wondering that, you wonder). This street is built on top of a hill, at the base of which is a park.
 
 At this time of night, all the children have left.  Thank god.
 
-Leaning from the steep slope and looking into the gathering darkness, you see the park and the old [[Walking Track]]. You turn and see the way to the old [[Milk Bar]].
+Leaning from the steep slope and looking into the gathering darkness, you see the park and the old [[Walking Track]]. You turn and see the way to the old [[Milk Bar]].]
 
-(if: $endGame is $roomsToWin)
-The street in front of the high school is deserted. You had best get moving, back to the [[Milk Bar]] and then to Savannah’s House. 
-</tw-passagedata><tw-passagedata pid="18" name="Walking Track" tags="" position="800,1000" size="100,100">(if: $endGame is not $roomsToWin)
-At the base of the hill, there is a park with a few old buildings and a circular walking track. It is getting dark, and in a few hours this field will be an indistinguishable pitch black. 
+(if: $endGame is $roomsToWin)[The street in front of the high school is deserted. You had best get moving, back to the [[Milk Bar]] and then to Savannah’s House.] 
+</tw-passagedata><tw-passagedata pid="18" name="Walking Track" tags="" position="800,1000" size="100,100">(if: $endGame is not $roomsToWin)[At the base of the hill, there is a park with a few old buildings and a circular walking track. It is getting dark, and in a few hours this field will be an indistinguishable pitch black. 
 
-You can climb up the cliffy footpath to the street outside the old [[High School]]. Or, you could keep going down to [[Bowden Street Reserve]].
+You can climb up the cliffy footpath to the street outside the old [[High School]]. Or, you could keep going down to [[Bowden Street Reserve]].]
 
-(if: $endGame is $roomsToWin)
-You are at the park on the base of the hill. It is night-time, and it feels as if you are walking through a black void. You quickly climb up the [[Hill.|High School]]</tw-passagedata><tw-passagedata pid="19" name="Alley" tags="" position="600,600" size="100,100">This dirt alley runs between two rows of houses. There is a sad looking shape slumped against a fence. 
+(if: $endGame is $roomsToWin)[You are at the park on the base of the hill. It is night-time, and it feels as if you are walking through a black void. You quickly climb up the [[Hill.|High School]]]</tw-passagedata><tw-passagedata pid="19" name="Alley" tags="" position="600,600" size="100,100">This dirt alley runs between two rows of houses. There is a sad looking shape slumped against a fence. 
 
 You can go back to the [[Milk Bar]].  
 </tw-passagedata><tw-passagedata pid="20" name="Bowden Street Reserve" tags="" position="800,1200" size="100,100">You’re down by the creek. There is the sound of rushing water and distant traffic. Its been a while since you’ve come down here. 
